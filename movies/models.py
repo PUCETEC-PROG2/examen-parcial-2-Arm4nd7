@@ -12,4 +12,4 @@ class Movie(models.Model):
     synopsis = models.TextField()
 
     def __str__(self):
-        return self.title
+        return self.title + " " + self. director_name

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Mis Peliculas{% endblock title %}
+{% block content %}
+<h1>Películas</h1>
+<div class="row">
+    {% for movie in movies %}
+        <h3>{{ movie.title }}</h3>
+        <ul>
+            <li>Genero:{{ movie.genere }}</li>
+            <li>Director:{{ movie.director_name }}</li>
+            <li>Año: {{ movie.year}}</li>
+            <a href="{% url 'movies:movie' movie.id %}" class="btn btn-primary">Detalles</a>
+
+        </ul>
+    {% endfor %}
+</div>
+{% endblock content %}

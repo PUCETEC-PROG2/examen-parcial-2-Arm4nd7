@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %} {{ movie | capfirst }} {% endblock title %}
+{% block content %}
+<p>Pelicula: <strong>{{ movie | capfirst }}</strong></p>
+<h3>Informacion</h3>
+<ul>
+    <li>Titulo: {{movie.title }}</li>
+    <li>Diretor: {{movie.director_name}}</li>
+    <li>Año: {{movie.year}}</li>
+</ul>
+{% endblock content %}
